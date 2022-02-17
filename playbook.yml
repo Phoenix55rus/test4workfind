@@ -26,3 +26,15 @@
   tags: confnginx
 
 - name: config sysctl
+  hosts: localhost
+  connection: local
+  roles:
+    - sysctl
+  tags: sysctl
+
+- name: add ssh key
+  hosts: localhost
+  connection: local
+  roles:
+    - ssh
+  tags: ssh
