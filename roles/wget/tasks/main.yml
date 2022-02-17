@@ -1,0 +1,9 @@
+  - name: Update system
+    package:
+      name: '*'
+      state: present
+
+  - name: Install wget
+    package:
+      name: "{{ package }}"
+      state: present

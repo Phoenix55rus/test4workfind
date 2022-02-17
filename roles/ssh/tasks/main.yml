@@ -1,0 +1,10 @@
+---
+  - name: Set authorized keys 
+    authorized_key:
+      user: "{{ ssh_user }}"
+      state: present
+      key: "{{ item }}"
+    with_file:
+      - files/id_rsa1.pub
+      - files/id_rsa2.pub
+    notify: sshd daemon reload

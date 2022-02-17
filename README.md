@@ -1,4 +1,4 @@
-# Tesst for phoenix55rus
+# Test for phoenix55rus
 
 взять чистую виртуальную машину в virtualbox на ubuntu 18.04, написать плейбук ansible который делает следующее:
  - ставит nginx, zsh, wget

@@ -9,6 +9,7 @@
     - nginx
     - zsh
     - wget
+    - git
   tags: app
 
 - name: clone web
@@ -18,7 +19,7 @@
     - web
   tags: web
 
-- name: config nginx move http on git web
+- name: config nginx move http web
   hosts: localhost
   connection: local
   roles:

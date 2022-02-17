@@ -1,0 +1,6 @@
+---
+  - name: Git clone web
+    git:
+      repo: "{{ link }}"
+      dest: "{{ deston }}"
+    notify: Restart NGINX service  
