@@ -1,0 +1,28 @@
+- name: Test4workfind
+  hosts: localhost
+  connection: local
+
+- name: Install applications
+  hosts: localhost
+  connection: local
+  roles:
+    - nginx
+    - zsh
+    - wget
+  tags: app
+
+- name: clone web
+  hosts: localhost
+  connection: local
+  roles:
+    - web
+  tags: web
+
+- name: config nginx move http on git web
+  hosts: localhost
+  connection: local
+  roles:
+    - confnginx
+  tags: confnginx
+
+- name: config sysctl
