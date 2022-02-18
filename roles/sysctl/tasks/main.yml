@@ -1,11 +1,11 @@
 ---
-  - name: Add a line to a file /etc/sysctl.conf
+  - name: Add fs.file
     sysctl:
       name: fs.file-max
-      value: "{{ fs.files-max }}"
+      value: "{{ fs_files_max }}"
       state: present
 
-  - name: Add a line to a file /etc/sysctl.conf
+  - name: Add somaxconn
     sysctl:
       name: net.core.somaxconn
       value: "{{ somaxconn }}"

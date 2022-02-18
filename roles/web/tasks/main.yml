@@ -1,4 +1,12 @@
 ---
+  - name: create dir
+    file:
+      path: "{{ deston }}{{name_folder}}"
+      owner: "{{ user_path }}"
+      group: "{{ user_group }}"
+      mode: "{{ path_prev }}"
+      state: directory
+
   - name: Git clone web
     git:
       repo: "{{ link }}"
